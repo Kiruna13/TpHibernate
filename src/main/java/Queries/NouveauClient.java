@@ -6,7 +6,6 @@ import org.hibernate.SessionFactory;
 
 public class NouveauClient {
     public static void main(String[] args) {
-
         SessionFactory factory = HibernateUtils.getSessionFactory();
 
         Session session = factory.getCurrentSession();
