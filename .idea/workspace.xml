@@ -5,22 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f30b2240-37a6-4d76-ac91-04d2c78e1c05" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Commande.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/Produit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TpHibernate.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Queries/HibernateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Produit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HibernateUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Queries/NouveauProduit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Queries/NouveauProduit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +57,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655815831701</updated>
-      <workItem from="1655815835470" duration="3440000" />
+      <workItem from="1655815835470" duration="6020000" />
     </task>
     <servers />
   </component>

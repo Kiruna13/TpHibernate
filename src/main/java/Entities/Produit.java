@@ -26,14 +26,12 @@ public class Produit {
     }
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "Id_Produit")
     public Integer getIdproduit() {
         return Id_Produit;
     }
 
-    public void setIdProduit(Integer Id_Produit) {
-        this.Id_Produit = Id_Produit;
-    }
 
     @Column(name = "Nom", nullable = false)
     public String getNom() {
