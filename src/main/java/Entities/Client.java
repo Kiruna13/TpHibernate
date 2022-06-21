@@ -27,17 +27,14 @@ public class Client {
     }
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "Id_Client")
     public Integer getIdClient() {
         return Id_Client;
     }
 
-    public void setIdClient(Integer Id_Client) {
-        this.Id_Client = Id_Client;
-    }
-
     @Column(name = "Nom", length = 20, nullable = false)
-    public String getDeptNo() {
+    public String getNom() {
         return Nom;
     }
 
@@ -46,7 +43,7 @@ public class Client {
     }
 
     @Column(name = "Prenom", nullable = false)
-    public String getDeptName() {
+    public String getPrenom() {
         return Prenom;
     }
 
