@@ -17,16 +17,18 @@ public class RequetesCommande {
         try {
             session.getTransaction().begin();
 
-            String sql = "SELECT co.id_commande, co.date_commande, co.heure_commande FROM " + Commande.class.getName() + " co " +
-                    "INNER JOIN "+ Client.class.getName() +" cl on cl.id_client = co.client " +
-                    "WHERE cl.nom_client = :nom_client " +
-                    "OR cl.prenom_client = :prenom_client " +
-                    "OR cl.telephone_client = :telephone_client";
+            String sql = "SELECT co.idCommande, co.dateCommande, co.heureCommande FROM " + Commande.class.getName() + " co " +
+                    "INNER JOIN "+ Client.class.getName() +" cl on cl.idClient = co.client " +
+                    "WHERE cl.nomClient = :nomClient " +
+                    "OR cl.prenomClient = :prenomClient " +
+                    "OR cl.telephoneClient = :telephoneClient";
 
             // Create Query object.
             Query<Commande> query = session.createQuery(sql, Commande.class);
 
-            query.setParameter("nom_client", "Goncalves");
+            query.setParameter("nomClient", "Goncalves");
+            query.setParameter("prenomClient", "Laura");
+            query.setParameter("telephoneClient", "0785142618");
 
             // Execute query.
             List<Commande> commandes = query.getResultList();
@@ -49,17 +51,19 @@ public class RequetesCommande {
         try {
             session.getTransaction().begin();
 
-            String sql = "SELECT co.date_commande, co.heure_commande FROM " + Commande.class.getName() + " co " +
-                    "INNER JOIN "+ Client.class.getName() +" cl on cl.id_client = co.client " +
-                    "WHERE cl.nom_client = :nom_client " +
-                    "OR cl.prenom_client = :prenom_client " +
-                    "OR cl.telephone_client = :telephone_client " +
-                    "ORDER BY co.date_commande DESC, co.heure_commande DESC, LIMIT (1)";
+            String sql = "SELECT co.dateCommande, co.heureCommande FROM " + Commande.class.getName() + " co " +
+                    "INNER JOIN "+ Client.class.getName() +" cl on cl.idClient = co.client " +
+                    "WHERE cl.nomClient = :nomClient " +
+                    "OR cl.prenomClient = :prenomClient " +
+                    "OR cl.telephoneClient = :telephoneClient " +
+                    "ORDER BY co.dateCommande DESC, co.heureCommande DESC, LIMIT (1)";
 
             // Create Query object.
             Query<Commande> query = session.createQuery(sql, Commande.class);
 
-            query.setParameter("nom_client", "Ducoulombier");
+            query.setParameter("nomClient", "Ducoulombier");
+            query.setParameter("prenomClient", "Thomas");
+            query.setParameter("telephoneClient", "0695690715");
 
             // Execute query.
             List<Commande> commandes = query.getResultList();

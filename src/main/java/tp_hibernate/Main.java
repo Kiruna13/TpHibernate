@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         //new NouveauProduit().addProduit();
         //new NouveauClient().addClient();
-        //new RequetesCommande().allCommandesClient();
-        new RequetesCommande().lastCommandeClient();
+        new RequetesCommande().allCommandesClient();
+        //new RequetesCommande().lastCommandeClient();
     }
 }
