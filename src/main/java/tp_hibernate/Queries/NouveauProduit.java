@@ -18,7 +18,7 @@ public class NouveauProduit {
             session.getTransaction().begin();
 
             produit = new Produit();
-            produit.setNom("Zbigznah32Z");
+            produit.setNomProduit("Zbigznah32Z");
             produit.setPrix(12.5f);
 
             session.persist(produit);
@@ -29,7 +29,7 @@ public class NouveauProduit {
             session.getTransaction().rollback();
         }
 
-        System.out.println("Produit No: " + produit.getIdproduit());
+        System.out.println("Produit No: " + produit.getIdProduit());
 
     }
 
