@@ -1,6 +1,6 @@
 package tp_hibernate.Entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,6 +31,10 @@ public class Client {
     @Column(name = "id_client")
     public Integer getIdClient() {
         return id_client;
+    }
+
+    public void setIdClient(Integer id_client) {
+        this.id_client = id_client;
     }
 
     @Column(name = "nom_client", length = 20, nullable = false)

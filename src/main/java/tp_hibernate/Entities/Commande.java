@@ -1,6 +1,6 @@
 package tp_hibernate.Entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.sql.Time;
 import java.util.Date;
 
@@ -28,12 +28,13 @@ public class Commande {
     }
 
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name = "id_commande")
     public Integer getIdCommande() {
         return id_commande;
     }
 
-    public void setIdcommande(Integer id_commande) {
+    public void setIdCommande(Integer id_commande) {
         this.id_commande = id_commande;
     }
 

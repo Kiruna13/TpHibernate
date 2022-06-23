@@ -1,6 +1,6 @@
 package tp_hibernate.Entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -54,7 +54,7 @@ public class Produit {
         this.prix = prix;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "produit")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "article")
     public Set<Commande> getCommandes() {
         return commandes;
     }
