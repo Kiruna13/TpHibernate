@@ -25,7 +25,6 @@ public class RequetesCommande {
                     "OR cl.prenom_client = :prenom_client " +
                     "OR cl.telephone_client = :telephone_client";
 
-
             // Create Query object.
             Query<Commande> query = session.createQuery(sql, Commande.class);
 
