@@ -32,6 +32,10 @@ public class Produit {
         return id_produit;
     }
 
+    public void setIdProduit(Integer id_produit) {
+        this.id_produit = id_produit;
+    }
+
     @Column(name = "nom_produit", nullable = false)
     public String getNomProduit() {
         return nom_produit;
@@ -50,7 +54,7 @@ public class Produit {
         this.prix = prix;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "Produit")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "produit")
     public Set<Commande> getCommandes() {
         return commandes;
     }

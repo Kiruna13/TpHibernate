@@ -6,61 +6,61 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = "Client",
-        uniqueConstraints = { @UniqueConstraint(columnNames = { "IdClient" }) })
+@Table(name = "client",
+        uniqueConstraints = { @UniqueConstraint(columnNames = { "id_client" }) })
 public class Client {
 
-    private Integer Id_Client;
-    private String Nom;
-    private String Prenom;
-    private String Telephone;
+    private Integer id_client;
+    private String nom_client;
+    private String prenom_client;
+    private String telephone_client;
     private Set<Commande> commandes = new HashSet<Commande>(0);
 
     public Client() {
     }
 
-    public Client(Integer Id_Client, String Nom, String Prenom, String Telephone) {
-        this.Id_Client = Id_Client;
-        this.Nom = Nom;
-        this.Prenom = Prenom;
-        this.Telephone = Telephone;
+    public Client(Integer id_client, String nom_client, String prenom_client, String telephone_client) {
+        this.id_client = id_client;
+        this.nom_client = nom_client;
+        this.prenom_client = prenom_client;
+        this.telephone_client = telephone_client;
     }
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(name = "Id_Client")
+    @Column(name = "id_client")
     public Integer getIdClient() {
-        return Id_Client;
+        return id_client;
     }
 
-    @Column(name = "Nom", length = 20, nullable = false)
-    public String getNom() {
-        return Nom;
+    @Column(name = "nom_client", length = 20, nullable = false)
+    public String getNomClient() {
+        return nom_client;
     }
 
-    public void setNom(String Nom) {
-        this.Nom = Nom;
+    public void setNomClient(String nom_client) {
+        this.nom_client = nom_client;
     }
 
-    @Column(name = "Prenom", nullable = false)
-    public String getPrenom() {
-        return Prenom;
+    @Column(name = "prenom_client", nullable = false)
+    public String getPrenomClient() {
+        return prenom_client;
     }
 
-    public void setPrenom(String Prenom) {
-        this.Prenom = Prenom;
+    public void setPrenomClient(String prenom_client) {
+        this.prenom_client = prenom_client;
     }
 
-    @Column(name = "Telephone")
-    public String getTelephone() {
-        return Telephone;
+    @Column(name = "telephone_client")
+    public String getTelephoneClient() {
+        return telephone_client;
     }
 
-    public void setTelephone(String Telephone) {
-        this.Telephone = Telephone;
+    public void setTelephoneClient(String telephone_client) {
+        this.telephone_client = telephone_client;
     }
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "Client")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "client")
     public Set<Commande> getCommandes() {
         return commandes;
     }

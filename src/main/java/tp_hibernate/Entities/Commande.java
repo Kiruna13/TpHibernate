@@ -6,73 +6,73 @@ import java.util.Date;
 
 
 @Entity
-@Table(name = "Client",
-        uniqueConstraints = { @UniqueConstraint(columnNames = { "IdCommande" }) })
+@Table(name = "commande",
+        uniqueConstraints = { @UniqueConstraint(columnNames = { "id_commande" }) })
 public class Commande {
 
-    private Integer IdCommande;
-    private Date Date;
-    private Time Heure;
-    private Produit Article;
-    private Client Client;
+    private Integer id_commande;
+    private Date date_commande;
+    private Time heure_commande;
+    private Produit article;
+    private Client client;
 
     public Commande() {
     }
 
-    public Commande(Integer IdCommande, Date Date, Time Heure, Produit Article, Client Client) {
-        this.IdCommande = IdCommande;
-        this.Date = Date;
-        this.Heure = Heure;
-        this.Article = Article;
-        this.Client = Client;
+    public Commande(Integer id_commande, Date date_commande, Time heure_commande, Produit article, Client client) {
+        this.id_commande = id_commande;
+        this.date_commande = date_commande;
+        this.heure_commande = heure_commande;
+        this.article = article;
+        this.client = client;
     }
 
     @Id
-    @Column(name = "Id_Commande")
-    public Integer getIdClient() {
-        return IdCommande;
+    @Column(name = "id_commande")
+    public Integer getIdCommande() {
+        return id_commande;
     }
 
-    public void setIdClient(Integer IdCommande) {
-        this.IdCommande = IdCommande;
+    public void setIdcommande(Integer id_commande) {
+        this.id_commande = id_commande;
     }
 
-    @Column(name = "Date", nullable = false)
-    public Date getDate() {
-        return Date;
+    @Column(name = "date_commande", nullable = false)
+    public Date getDateCommande() {
+        return date_commande;
     }
 
-    public void setDate(Date Date) {
-        this.Date = Date;
+    public void setDateCommande(Date date_commande) {
+        this.date_commande = date_commande;
     }
 
-    @Column(name = "Heure", nullable = false)
-    public Time getHeure() {
-        return Heure;
+    @Column(name = "heure_commande", nullable = false)
+    public Time getHeureCommande() {
+        return heure_commande;
     }
 
-    public void setHeure(Time Heure) {
-        this.Heure = Heure;
+    public void setHeureCommande(Time heure_commande) {
+        this.heure_commande = heure_commande;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Id_Produit")
+    @JoinColumn(name = "article")
     public Produit getArticle() {
-        return Article;
+        return article;
     }
 
-    public void setArticle(Produit Article) {
-        this.Article = Article;
+    public void setArticle(Produit article) {
+        this.article = article;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Id_Client")
+    @JoinColumn(name = "client")
     public Client getClient() {
-        return Client;
+        return client;
     }
 
-    public void setClient(Client Client) {
-        this.Client = Client;
+    public void setClient(Client client) {
+        this.client = client;
     }
 }
 

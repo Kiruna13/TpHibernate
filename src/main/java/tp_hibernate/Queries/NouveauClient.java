@@ -17,9 +17,9 @@ public class NouveauClient {
             session.getTransaction().begin();
 
             client = new Client();
-            client.setNom("Milos");
-            client.setPrenom("Ricardo");
-            client.setTelephone("0636426996");
+            client.setNomClient("Milos");
+            client.setPrenomClient("Ricardo");
+            client.setTelephoneClient("0636426996");
 
             session.persist(client);
 
@@ -30,6 +30,6 @@ public class NouveauClient {
         }
 
         assert client != null;
-        System.out.println("Nom dernier client: " + client.getNom());
+        System.out.println("Nom dernier client: " + client.getNomClient());
     }
 }
