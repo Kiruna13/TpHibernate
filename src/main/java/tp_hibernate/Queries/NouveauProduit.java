@@ -12,13 +12,12 @@ public class NouveauProduit {
         SessionFactory factory = HibernateUtils.getSessionFactory();
 
         Session session = factory.getCurrentSession();
-        Produit produit = new Produit();
+        Produit produit = null;
 
         try {
             session.getTransaction().begin();
 
-            //produit = new Produit();
-            produit.setIdProduit(1);
+            produit = new Produit();
             produit.setNomProduit("Zbigznah32Z");
             produit.setPrix(12.5f);
 
