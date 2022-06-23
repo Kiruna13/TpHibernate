@@ -1,12 +1,14 @@
-package Queries;
+package tp_hibernate.Queries;
 
-import Entities.Client;
+import org.hibernate.cfg.Configuration;
+import tp_hibernate.HibernateUtils;
+import tp_hibernate.Entities.Client;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 public class NouveauClient {
-    public static void main(String[] args) {
-        SessionFactory factory = HibernateUtils.getSessionFactory();
+    public void addClient() {
+        SessionFactory factory = new Configuration().configure().buildSessionFactory();;
 
         Session session = factory.getCurrentSession();
         Client client = null;

@@ -1,16 +1,13 @@
-package Queries;
+package tp_hibernate.Queries;
 
-import java.util.Date;
-
-import Entities.Produit;
+import tp_hibernate.Entities.Produit;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-
-
+import tp_hibernate.HibernateUtils;
 
 public class NouveauProduit {
 
-    public static void addProduit(String[] args) {
+    public void addProduit() {
 
         SessionFactory factory = HibernateUtils.getSessionFactory();
 

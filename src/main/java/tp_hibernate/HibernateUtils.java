@@ -1,4 +1,4 @@
-package Queries;
+package tp_hibernate;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;

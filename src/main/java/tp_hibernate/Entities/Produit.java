@@ -1,4 +1,4 @@
-package Entities;
+package tp_hibernate.Entities;
 
 import javax.persistence.*;
 import java.util.HashSet;
