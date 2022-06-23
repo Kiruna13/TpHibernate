@@ -51,7 +51,7 @@ public class RequetesCommande {
 
             String sql = "SELECT co.date_commande, co.heure_commande FROM " + Commande.class.getName() + " co " +
                     "INNER JOIN "+ Client.class.getName() +" cl on cl.id_client = co.client " +
-                    "WHERE cl.nom_client = :nom_client" +
+                    "WHERE cl.nom_client = :nom_client " +
                     "OR cl.prenom_client = :prenom_client " +
                     "OR cl.telephone_client = :telephone_client " +
                     "ORDER BY co.date_commande DESC, co.heure_commande DESC, LIMIT (1)";

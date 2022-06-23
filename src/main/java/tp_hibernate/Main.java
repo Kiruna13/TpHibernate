@@ -6,9 +6,9 @@ import tp_hibernate.Queries.RequetesCommande;
 
 public class Main {
     public static void main(String[] args) {
-        new NouveauProduit().addProduit();
-        new NouveauClient().addClient();
-        new RequetesCommande().allCommandesClient();
+        //new NouveauProduit().addProduit();
+        //new NouveauClient().addClient();
+        //new RequetesCommande().allCommandesClient();
         new RequetesCommande().lastCommandeClient();
     }
 }
